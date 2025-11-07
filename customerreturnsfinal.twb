@@ -1,0 +1,2480 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='CustomerReturns_17601828435570' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='spend_vs_return' inline='true' name='federated.00bnbes1rbb8ny1b5ro881cefw6p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='spend_vs_return' name='textscan.1cjllfq02d3ziw0zvxsmf1dvibt0'>
+            <connection class='textscan' directory='C:/Users/sarah/Desktop/projects/1customerreturns' filename='spend_vs_return.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1cjllfq02d3ziw0zvxsmf1dvibt0' name='spend_vs_return.csv' table='[spend_vs_return#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Customer ID' ordinal='0' />
+            <column datatype='real' name='TotalPrice' ordinal='1' />
+            <column datatype='real' name='Predicted Return Probability' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spend_vs_return.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[spend_vs_return.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spend_vs_return.csv_AF0D886EFD644FEAA42EE44203FDE68F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalPrice]</local-name>
+            <parent-name>[spend_vs_return.csv]</parent-name>
+            <remote-alias>TotalPrice</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spend_vs_return.csv_AF0D886EFD644FEAA42EE44203FDE68F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Predicted Return Probability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Predicted Return Probability]</local-name>
+            <parent-name>[spend_vs_return.csv]</parent-name>
+            <remote-alias>Predicted Return Probability</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spend_vs_return.csv_AF0D886EFD644FEAA42EE44203FDE68F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Customer ID]' role='dimension' type='ordinal' />
+      <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+      <column caption='spend_vs_return.csv' datatype='table' name='[__tableau_internal_object_id__].[spend_vs_return.csv_AF0D886EFD644FEAA42EE44203FDE68F]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/sarah/AppData/Local/Temp/TableauTemp/#TableauTemp_1fpqhg119g1wyi18hm80s1i67hck.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/15/2025 02:59:46 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>spend_vs_return.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>861</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TotalPrice</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TotalPrice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TotalPrice</remote-alias>
+              <ordinal>1</ordinal>
+              <family>spend_vs_return.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>859</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Predicted Return Probability</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Predicted Return Probability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Predicted Return Probability</remote-alias>
+              <ordinal>2</ordinal>
+              <family>spend_vs_return.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>663</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='spend_vs_return.csv' id='spend_vs_return.csv_AF0D886EFD644FEAA42EE44203FDE68F'>
+            <properties context=''>
+              <relation connection='textscan.1cjllfq02d3ziw0zvxsmf1dvibt0' name='spend_vs_return.csv' table='[spend_vs_return#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Customer ID' ordinal='0' />
+                  <column datatype='real' name='TotalPrice' ordinal='1' />
+                  <column datatype='real' name='Predicted Return Probability' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='feature_importance' inline='true' name='federated.142mmyw12sr60f14tycs214he0az' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='feature_importance' name='textscan.1ki8djm0ftg2qk16n5hoc0zv9lgo'>
+            <connection class='textscan' directory='C:/Users/sarah/Desktop/projects/1customerreturns' filename='feature_importance.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ki8djm0ftg2qk16n5hoc0zv9lgo' name='feature_importance.csv' table='[feature_importance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Feature Name' ordinal='0' />
+            <column datatype='real' name='Importance Score' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Feature Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Feature Name]</local-name>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias>Feature Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[feature_importance.csv_5E5CE3CE24124B02A1E7C47FEA2C48AE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Importance Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Importance Score]</local-name>
+            <parent-name>[feature_importance.csv]</parent-name>
+            <remote-alias>Importance Score</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[feature_importance.csv_5E5CE3CE24124B02A1E7C47FEA2C48AE]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='feature_importance.csv' datatype='table' name='[__tableau_internal_object_id__].[feature_importance.csv_5E5CE3CE24124B02A1E7C47FEA2C48AE]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/sarah/AppData/Local/Temp/TableauTemp/#TableauTemp_1njxwou0qcs8ls185sne41r6nvt2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/15/2025 03:15:36 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Feature Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Feature Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Feature Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>feature_importance.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Importance Score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Importance Score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Importance Score</remote-alias>
+              <ordinal>1</ordinal>
+              <family>feature_importance.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='feature_importance.csv' id='feature_importance.csv_5E5CE3CE24124B02A1E7C47FEA2C48AE'>
+            <properties context=''>
+              <relation connection='textscan.1ki8djm0ftg2qk16n5hoc0zv9lgo' name='feature_importance.csv' table='[feature_importance#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Feature Name' ordinal='0' />
+                  <column datatype='real' name='Importance Score' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='customer_data_for_tableau_correct' inline='true' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='customer_data_for_tableau_correct' name='textscan.11tdbrq00tcnrl1ae10ti11qn54s'>
+            <connection class='textscan' directory='C:/Users/sarah/Downloads' filename='customer_data_for_tableau_correct.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.11tdbrq00tcnrl1ae10ti11qn54s' name='customer_data_for_tableau_correct.csv' table='[customer_data_for_tableau_correct#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Customer ID' ordinal='0' />
+            <column datatype='integer' name='Quantity' ordinal='1' />
+            <column datatype='real' name='TotalPrice' ordinal='2' />
+            <column datatype='integer' name='Invoice' ordinal='3' />
+            <column datatype='string' name='Country' ordinal='4' />
+            <column datatype='integer' name='Returned' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalPrice]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>TotalPrice</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Invoice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Invoice]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>Invoice</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Returned</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Returned]</local-name>
+            <parent-name>[customer_data_for_tableau_correct.csv]</parent-name>
+            <remote-alias>Returned</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Return Rate' datatype='real' name='[Calculation_521854669967945728]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='avg([Returned])' />
+      </column>
+      <column caption='Returned Label' datatype='string' name='[Calculation_521854669968113665]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Returned] = 1 THEN &quot;Returned&quot;&#13;&#10;ELSE &quot;Not Returned&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Spend Category' datatype='string' name='[Calculation_521854670446202882]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [TotalPrice] &lt; 500 THEN &quot;Low&quot;&#13;&#10;ELSEIF [TotalPrice] &lt; 1500 THEN &quot;Medium&quot;&#13;&#10;ELSE &quot;High&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' datatype-customized='true' name='[Customer ID]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+      <column aggregation='None' caption='Spend Bins' datatype='integer' name='[Total Price (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='4' formula='[TotalPrice]' peg='0' size='100000' />
+      </column>
+      <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+      <column caption='customer_data_for_tableau_correct.csv' datatype='table' name='[__tableau_internal_object_id__].[customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_521854669968113665]' derivation='None' name='[none:Calculation_521854669968113665:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Country)' hidden='true' name='[Action (Country)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Returned Label,Customer ID)' hidden='true' name='[Action (Returned Label,Customer ID)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_521854669968113665]' />
+          <groupfilter function='level-members' level='[Customer ID]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/sarah/AppData/Local/Temp/TableauTemp/#TableauTemp_1ty64md0v5fvuc12s83kj1sl29c0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/15/2025 02:59:19 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4372</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>1</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1285</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TotalPrice</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TotalPrice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TotalPrice</remote-alias>
+              <ordinal>2</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Invoice</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Invoice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Invoice</remote-alias>
+              <ordinal>3</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>4</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Returned</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Returned]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Returned</remote-alias>
+              <ordinal>5</ordinal>
+              <family>customer_data_for_tableau_correct.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_521854669968113665:nk]' type='palette'>
+            <map to='#32779b'>
+              <bucket>&quot;Returned&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;Not Returned&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='customer_data_for_tableau_correct.csv' id='customer_data_for_tableau_correct.csv_B3E6E3A2E8C94C67A54DF79FF10E2170'>
+            <properties context=''>
+              <relation connection='textscan.11tdbrq00tcnrl1ae10ti11qn54s' name='customer_data_for_tableau_correct.csv' table='[customer_data_for_tableau_correct#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Customer ID' ordinal='0' />
+                  <column datatype='integer' name='Quantity' ordinal='1' />
+                  <column datatype='real' name='TotalPrice' ordinal='2' />
+                  <column datatype='integer' name='Invoice' ordinal='3' />
+                  <column datatype='string' name='Country' ordinal='4' />
+                  <column datatype='integer' name='Returned' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='model_comparison' inline='true' name='federated.034l8et0cnjvyg123nwaw0zfl5tp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='model_comparison' name='excel-direct.02s7zo51z0oz3s1cxjp3x0t0iksd'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/sarah/Desktop/projects/1customerreturns/model_comparison.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.02s7zo51z0oz3s1cxjp3x0t0iksd' name='model_comparison' table='[model_comparison$]' type='table'>
+          <columns gridOrigin='A1:C4:no:A1:C4:0' header='yes' outcome='6'>
+            <column datatype='string' name='Model Name' ordinal='0' />
+            <column datatype='real' name='Accuracy' ordinal='1' />
+            <column datatype='real' name='AUC' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[model_comparison]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C4:no:A1:C4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Model Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Model Name]</local-name>
+            <parent-name>[model_comparison]</parent-name>
+            <remote-alias>Model Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Accuracy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Accuracy]</local-name>
+            <parent-name>[model_comparison]</parent-name>
+            <remote-alias>Accuracy</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AUC</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AUC]</local-name>
+            <parent-name>[model_comparison]</parent-name>
+            <remote-alias>AUC</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Model Name1' datatype='string' name='[Model Name]' role='dimension' type='nominal' />
+      <column caption='model_comparison' datatype='table' name='[__tableau_internal_object_id__].[model!comparison_78C6E991CE3149F1B975319CB8332C70]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/sarah/AppData/Local/Temp/TableauTemp/#TableauTemp_0x5yifd0cm9i6z1gjh3b01ydgcu4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/29/2025 02:25:56 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Model Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Model Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Model Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>model_comparison</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Accuracy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Accuracy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Accuracy</remote-alias>
+              <ordinal>1</ordinal>
+              <family>model_comparison</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AUC</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[AUC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AUC</remote-alias>
+              <ordinal>2</ordinal>
+              <family>model_comparison</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[model!comparison_78C6E991CE3149F1B975319CB8332C70]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='model_comparison' id='model!comparison_78C6E991CE3149F1B975319CB8332C70'>
+            <properties context=''>
+              <relation connection='excel-direct.02s7zo51z0oz3s1cxjp3x0t0iksd' name='model_comparison' table='[model_comparison$]' type='table'>
+                <columns gridOrigin='A1:C4:no:A1:C4:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Model Name' ordinal='0' />
+                  <column datatype='real' name='Accuracy' ordinal='1' />
+                  <column datatype='real' name='AUC' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter on Overview' name='[Action1_967F204BB6404500828FA027CA7599F3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Customer Returns Overview' type='sheet'>
+        <exclude-sheet name='KPI_Avg_Quantity' />
+        <exclude-sheet name='KPI_Avg_Spend' />
+        <exclude-sheet name='KPI_Total_Customers' />
+        <exclude-sheet name='KPI_Return_Rate' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='KPI_Avg_Quantity,KPI_Avg_Spend,KPI_Total_Customers,KPI_Return_Rate' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Customer Returns Overview' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action2_50745815C8C04E9FB28AB423BD48F995]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Spend vs Quantity' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Returned Label' />
+        <param name='target' value='Spend vs Quantity' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action3_251DCD1A52E94B42AE427C75CAB7A5D5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Customer Returns Overview' type='sheet' worksheet='Spend Category vs Return Rate' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Customer Returns Overview' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Feature Importance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Segoe UI' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feature_importance' name='federated.142mmyw12sr60f14tycs214he0az' />
+          </datasources>
+          <datasource-dependencies datasource='federated.142mmyw12sr60f14tycs214he0az'>
+            <column datatype='string' name='[Feature Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Importance Score]' role='measure' type='quantitative' />
+            <column-instance column='[Feature Name]' derivation='None' name='[none:Feature Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Importance Score]' derivation='Sum' name='[sum:Importance Score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.142mmyw12sr60f14tycs214he0az].[none:Feature Name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.142mmyw12sr60f14tycs214he0az].[sum:Importance Score:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='5' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.142mmyw12sr60f14tycs214he0az].[sum:Importance Score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.142mmyw12sr60f14tycs214he0az].[none:Feature Name:nk]</rows>
+        <cols>[federated.142mmyw12sr60f14tycs214he0az].[sum:Importance Score:qk]</cols>
+      </table>
+      <simple-id uuid='{1CC3F476-2E19-40B4-8E5F-A9B7FC857B13}' />
+    </worksheet>
+    <worksheet name='KPI_Avg_Quantity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI'>Avg Quantity Purchased</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='Avg' name='[avg:Quantity:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:Quantity:qk]' value='n#,##0;-#,##0' />
+            <format attr='font-size' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:Quantity:qk]' value='36' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:Quantity:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:Quantity:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6DD12E04-EDB7-4C25-8781-42F92EF51392}' />
+    </worksheet>
+    <worksheet name='KPI_Avg_Spend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI'>Avg Spend per Customer</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+            <column-instance column='[TotalPrice]' derivation='Avg' name='[avg:TotalPrice:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:TotalPrice:qk]' value='c&quot;£&quot;#,##0;-&quot;£&quot;#,##0' />
+            <format attr='font-size' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:TotalPrice:qk]' value='36' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:TotalPrice:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[avg:TotalPrice:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4D5A2FA7-9BA0-44FE-ABA2-DD8373981D73}' />
+    </worksheet>
+    <worksheet name='KPI_Return_Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI'>% Returned Customers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Return Rate' datatype='real' name='[Calculation_521854669967945728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='avg([Returned])' />
+            </column>
+            <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+            <column-instance column='[Calculation_521854669967945728]' derivation='User' name='[usr:Calculation_521854669967945728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' value='p0.0%' />
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='36' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='total' value='9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='36' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='15' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{449188BE-862D-4853-B38C-DE2E4F1451F2}' />
+    </worksheet>
+    <worksheet name='KPI_Total_Customers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI'>Total Customers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column datatype='string' datatype-customized='true' name='[Customer ID]' role='dimension' type='nominal' />
+            <column-instance column='[Customer ID]' derivation='CountD' name='[ctd:Customer ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' data-class='subtotal' scope='rows' value='#2c5985' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='36' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='15' />
+            <format attr='color' value='#b4b4b4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[ctd:Customer ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[ctd:Customer ID:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.84558010101318359' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B1BEB2E9-7BC8-40FC-A9C8-646CC835D8D8}' />
+    </worksheet>
+    <worksheet name='Model Comparison'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Segoe UI' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='model_comparison' name='federated.034l8et0cnjvyg123nwaw0zfl5tp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.034l8et0cnjvyg123nwaw0zfl5tp'>
+            <column datatype='real' name='[AUC]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Accuracy]' role='measure' type='quantitative' />
+            <column caption='Model Name1' datatype='string' name='[Model Name]' role='dimension' type='nominal' />
+            <column-instance column='[Model Name]' derivation='None' name='[none:Model Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AUC]' derivation='Sum' name='[sum:AUC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Accuracy]' derivation='Sum' name='[sum:Accuracy:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.034l8et0cnjvyg123nwaw0zfl5tp].[none:Model Name:nk]'>
+            <groupfilter function='level-members' level='[none:Model Name:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.034l8et0cnjvyg123nwaw0zfl5tp].[none:Model Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.034l8et0cnjvyg123nwaw0zfl5tp].[none:Model Name:nk]' value='162' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' scope='rows' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#419da7' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.034l8et0cnjvyg123nwaw0zfl5tp].[sum:Accuracy:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#2c5985' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.034l8et0cnjvyg123nwaw0zfl5tp].[sum:AUC:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#3d7cb8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.034l8et0cnjvyg123nwaw0zfl5tp].[sum:Accuracy:qk] + [federated.034l8et0cnjvyg123nwaw0zfl5tp].[sum:AUC:qk])</rows>
+        <cols>[federated.034l8et0cnjvyg123nwaw0zfl5tp].[none:Model Name:nk]</cols>
+      </table>
+      <simple-id uuid='{F046FEFE-BFCA-42DF-83CD-9B21D2895929}' />
+    </worksheet>
+    <worksheet name='Return Distribution'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'>Return vs Non-Return Customers</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12' italic='true'>Overall share of customers who made a return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Returned Label' datatype='string' name='[Calculation_521854669968113665]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Returned] = 1 THEN &quot;Returned&quot;&#13;&#10;ELSE &quot;Not Returned&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' datatype-customized='true' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+            <column-instance column='[Customer ID]' derivation='CountD' name='[ctd:Customer ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_521854669968113665]' derivation='None' name='[none:Calculation_521854669968113665:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer ID]' derivation='CountD' name='[pcto:ctd:Customer ID:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[Action (Country)]'>
+            <groupfilter function='level-members' level='[Country]' user:ui-action-filter='[Action1_967F204BB6404500828FA027CA7599F3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_521854669968113665:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[Action (Country)]</column>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]</column>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[ctd:Customer ID:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[pcto:ctd:Customer ID:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' />
+              <text column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[pcto:ctd:Customer ID:qk]' />
+              <lod column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[ctd:Customer ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.7471270561218262' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[ctd:Customer ID:qk]</rows>
+        <cols>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]</cols>
+      </table>
+      <simple-id uuid='{2D7261D4-C6FF-4317-BEB3-67E00E4C99DB}' />
+    </worksheet>
+    <worksheet name='Return Rate by Country'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'>Return Rate by Country</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12' italic='true'>Countries with customer return percentages</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Return Rate' datatype='real' name='[Calculation_521854669967945728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='avg([Returned])' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' datatype-customized='true' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+            <column-instance column='[Customer ID]' derivation='Attribute' name='[attr:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_521854669967945728]' derivation='User' name='[usr:Calculation_521854669967945728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' value='Country'>
+              <formatted-text>
+                <run>Country</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' />
+              <tooltip column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' />
+              <tooltip column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[attr:Customer ID:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[Country: <[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[Return Rate: <[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[Total Customers:<[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[attr:Customer ID:nk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]</rows>
+        <cols>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]</cols>
+      </table>
+      <simple-id uuid='{78EFC20B-5053-4E71-9C6B-8A7A61706453}' />
+    </worksheet>
+    <worksheet name='Spend Category vs Return Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'>Return Rate by Spending Group</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'>Higher spenders tend to return more often</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Return Rate' datatype='real' name='[Calculation_521854669967945728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='avg([Returned])' />
+            </column>
+            <column caption='Spend Category' datatype='string' name='[Calculation_521854670446202882]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [TotalPrice] &lt; 500 THEN &quot;Low&quot;&#13;&#10;ELSEIF [TotalPrice] &lt; 1500 THEN &quot;Medium&quot;&#13;&#10;ELSE &quot;High&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+            <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_521854670446202882]' derivation='None' name='[none:Calculation_521854670446202882:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_521854669967945728]' derivation='User' name='[usr:Calculation_521854669967945728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_521854670446202882:nk]' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]</rows>
+        <cols>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]</cols>
+        <show-full-range>
+          <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[Total Price (bin) 2]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{CE7D149E-AC8A-4305-A058-16387CE8ED23}' />
+    </worksheet>
+    <worksheet name='Spend vs Quantity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'>Spending vs Quantity Purchased</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12' italic='true'>Do higher spenders or bulk buyers return more often?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+            <column caption='Returned Label' datatype='string' name='[Calculation_521854669968113665]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Returned] = 1 THEN &quot;Returned&quot;&#13;&#10;ELSE &quot;Not Returned&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' datatype-customized='true' name='[Customer ID]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Returned]' role='measure' type='ordinal' />
+            <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_521854669968113665]' derivation='None' name='[none:Calculation_521854669968113665:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TotalPrice]' derivation='Sum' name='[sum:TotalPrice:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[Action (Country)]'>
+            <groupfilter function='level-members' level='[Country]' user:ui-action-filter='[Action1_967F204BB6404500828FA027CA7599F3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[Action (Country)]</column>
+            <column>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' />
+              <lod column='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Customer ID:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enable-tooltips='false' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Returned Label:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Customer ID:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Customer ID:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Quantity:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[sum:Quantity:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total Spend:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[sum:TotalPrice:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.80160218477249146' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='155' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[sum:Quantity:qk]</rows>
+        <cols>[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[sum:TotalPrice:qk]</cols>
+      </table>
+      <simple-id uuid='{A636B809-28EC-459D-8C57-F94F22326039}' />
+    </worksheet>
+    <worksheet name='Spend vs Return'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Segoe UI' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spend_vs_return' name='federated.00bnbes1rbb8ny1b5ro881cefw6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00bnbes1rbb8ny1b5ro881cefw6p'>
+            <column datatype='integer' name='[Customer ID]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Predicted Return Probability]' role='measure' type='quantitative' />
+            <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+            <column-instance column='[Customer ID]' derivation='None' name='[none:Customer ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Predicted Return Probability]' derivation='Sum' name='[sum:Predicted Return Probability:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TotalPrice]' derivation='Sum' name='[sum:TotalPrice:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.00bnbes1rbb8ny1b5ro881cefw6p].[none:Customer ID:ok]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enable-tooltips='false' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.53773480653762817' />
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='mark-transparency' value='116' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00bnbes1rbb8ny1b5ro881cefw6p].[sum:Predicted Return Probability:qk]</rows>
+        <cols>[federated.00bnbes1rbb8ny1b5ro881cefw6p].[sum:TotalPrice:qk]</cols>
+      </table>
+      <simple-id uuid='{3416F6C9-B319-4EA1-93B4-0A4BD2A9462F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Customer Returns Overview'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='customer_data_for_tableau_correct' name='federated.1ng3mvo1t7echy12d3b6d0hkdqv6' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1ng3mvo1t7echy12d3b6d0hkdqv6'>
+        <column caption='Returned Label' datatype='string' name='[Calculation_521854669968113665]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [Returned] = 1 THEN &quot;Returned&quot;&#13;&#10;ELSE &quot;Not Returned&quot;&#13;&#10;END' />
+        </column>
+        <column caption='Spend Category' datatype='string' name='[Calculation_521854670446202882]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [TotalPrice] &lt; 500 THEN &quot;Low&quot;&#13;&#10;ELSEIF [TotalPrice] &lt; 1500 THEN &quot;Medium&quot;&#13;&#10;ELSE &quot;High&quot;&#13;&#10;END' />
+        </column>
+        <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column-instance column='[Calculation_521854669968113665]' derivation='None' name='[none:Calculation_521854669968113665:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_521854670446202882]' derivation='None' name='[none:Calculation_521854670446202882:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='44' param='horz' type-v2='layout-flow' w='99034' x='483' y='999'>
+            <zone h='98002' id='22' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+              <zone h='98002' id='14' param='horz' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone h='98002' id='12' type-v2='layout-basic' w='99034' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#75a1c7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='background-color' value='#f0f7fa' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='12734' id='3' type-v2='text' w='54919' x='21726' y='999'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='18'>Customer Returns Overview Dashbaord</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'> Analyzing customer return behavior | Built by Sarah Tondle</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='16479' id='5' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='87326' x='12191' y='14232'>
+          <zone fixed-size='395' h='16480' id='6' is-fixed='true' name='KPI_Total_Customers' w='21846' x='12191' y='14232'>
+            <layout-cache fixed-size-h='203' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='444' h='16480' id='7' is-fixed='true' name='KPI_Return_Rate' w='21847' x='34037' y='14232'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='463' h='16480' id='8' is-fixed='true' name='KPI_Avg_Spend' w='21847' x='55884' y='14232'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='449' h='16480' id='9' is-fixed='true' name='KPI_Avg_Quantity' w='21786' x='77731' y='14232'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='52434' id='10' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='96801' x='1629' y='35206'>
+          <zone fixed-size='424' h='52434' id='11' is-fixed='true' name='Return Rate by Country' w='24201' x='1629' y='35206'>
+            <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='52434' id='16' name='Spend vs Quantity' w='24200' x='25830' y='35206'>
+            <layout-cache minwidth='178' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='493' h='52434' id='18' is-fixed='true' name='Return Distribution' w='24201' x='50030' y='35206'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='52434' id='37' name='Spend Category vs Return Rate' w='24200' x='74231' y='35206'>
+            <zone-style>
+              <format attr='border-color' value='#4e79a7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='6492' id='28' type-v2='dashboard-object' w='20601' x='77315' y='4494'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{66084CAF-F626-475F-BEC7-90A8C7A235B4}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>&gt; Go to Model Insights</caption>
+              <button-caption-font-style fontname='Segoe UI Semibold' fontsize='12' />
+              <format attr='background-color' value='#ffffff' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone forceUpdate='true' h='15356' id='31' type-v2='text' w='10078' x='1811' y='14732'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='28'>KPI:</run>
+          </formatted-text>
+        </zone>
+        <zone h='7990' id='46' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='96500' x='1811' y='88639'>
+          <zone fixed-size='345' h='7990' id='34' is-fixed='true' mode='dropdown' name='Return Rate by Country' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' type-v2='filter' values='database' w='32166' x='1811' y='88639'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7990' id='42' mode='checkdropdown' name='Spend Category vs Return Rate' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]' type-v2='filter' values='database' w='32167' x='33977' y='88639'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7990' id='45' mode='checkdropdown' name='Return Distribution' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' type-v2='filter' values='database' w='32166' x='66144' y='88639'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2050' minheight='2050' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='53' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone forceUpdate='true' h='12734' id='3' type-v2='text' w='54919' x='21726' y='999'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='18'>Customer Returns Overview Dashbaord</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='12'> Analyzing customer return behavior | Built by Sarah Tondle</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6492' id='28' type-v2='dashboard-object' w='20601' x='77315' y='4494'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{66084CAF-F626-475F-BEC7-90A8C7A235B4}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>&gt; Go to Model Insights</caption>
+                      <button-caption-font-style fontname='Segoe UI Semibold' fontsize='12' />
+                      <format attr='background-color' value='#ffffff' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='16480' id='6' is-fixed='true' name='KPI_Total_Customers' w='21846' x='12191' y='14232'>
+                  <layout-cache fixed-size-h='203' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='16480' id='7' is-fixed='true' name='KPI_Return_Rate' w='21847' x='34037' y='14232'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='16480' id='8' is-fixed='true' name='KPI_Avg_Spend' w='21847' x='55884' y='14232'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='16480' id='9' is-fixed='true' name='KPI_Avg_Quantity' w='21786' x='77731' y='14232'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='15356' id='31' type-v2='text' w='10078' x='1811' y='14732'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='28'>KPI:</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='345' h='7990' id='34' mode='dropdown' name='Return Rate by Country' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' type-v2='filter' values='database' w='32166' x='1811' y='88639'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52434' id='11' is-fixed='true' name='Return Rate by Country' w='24201' x='1629' y='35206'>
+                  <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52434' id='16' is-fixed='true' name='Spend vs Quantity' w='24200' x='25830' y='35206'>
+                  <layout-cache minwidth='178' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7990' id='45' mode='checkdropdown' name='Return Distribution' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' type-v2='filter' values='database' w='32166' x='66144' y='88639'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52434' id='18' is-fixed='true' name='Return Distribution' w='24201' x='50030' y='35206'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7990' id='42' mode='checkdropdown' name='Spend Category vs Return Rate' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854670446202882:nk]' type-v2='filter' values='database' w='32167' x='33977' y='88639'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52434' id='37' is-fixed='true' name='Spend Category vs Return Rate' w='24200' x='74231' y='35206'>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D217D3F8-9BF8-4802-957F-1535A130555B}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Model Insights'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_3' value='left' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='16' param='horz' type-v2='layout-flow' w='99034' x='483' y='999'>
+            <zone h='98002' id='14' type-v2='layout-basic' w='99034' x='483' y='999'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='background-color' value='#f0f7fa' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='11111' id='3' type-v2='text' w='60665' x='16858' y='749'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='15'>MODEL INSIGHTS &amp; PREDICTION ANALYSIS</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='15'>Comparing model performance and understanding key return predictors</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='33333' id='6' name='Spend vs Return' w='97465' x='1207' y='63795'>
+          <zone-style>
+            <format attr='border-color' value='#2c5985' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='6492' id='7' type-v2='dashboard-object' w='21304' x='78274' y='2122'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{6F1F3158-9EE1-4D58-83B1-8B8E13C51891}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>&lt;  Back to Customer Overview</caption>
+              <button-caption-font-style fontname='Segoe UI Semibold' fontsize='12' />
+              <format attr='background-color' value='#ffffff' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='51311' id='12' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98552' x='724' y='12235'>
+          <zone h='51311' id='4' name='Model Comparison' w='49306' x='724' y='12235'>
+            <layout-cache cell-count-w='3' minheight='288' non-cell-size-w='65' type-h='scalable' type-w='cell' />
+            <zone-style>
+              <format attr='border-color' value='#2c5985' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='51311' id='5' name='Feature Importance' w='49246' x='50030' y='12235'>
+            <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#2c5985' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='24' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='23' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone forceUpdate='true' h='11111' id='3' type-v2='text' w='60665' x='16858' y='749'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='15'>MODEL INSIGHTS &amp; PREDICTION ANALYSIS</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='15'>Comparing model performance and understanding key return predictors</run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6492' id='7' type-v2='dashboard-object' w='21304' x='78274' y='2122'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{6F1F3158-9EE1-4D58-83B1-8B8E13C51891}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>&lt;  Back to Customer Overview</caption>
+                      <button-caption-font-style fontname='Segoe UI Semibold' fontsize='12' />
+                      <format attr='background-color' value='#ffffff' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51311' id='4' is-fixed='true' name='Model Comparison' w='49306' x='724' y='12235'>
+                  <layout-cache cell-count-w='3' minheight='288' non-cell-size-w='65' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#2c5985' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51311' id='5' is-fixed='true' name='Feature Importance' w='49246' x='50030' y='12235'>
+                  <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#2c5985' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='263' h='33333' id='6' is-fixed='true' name='Spend vs Return' w='97465' x='1207' y='63795'>
+                  <zone-style>
+                    <format attr='border-color' value='#2c5985' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{17198172-E794-4C6D-BE41-9F3C662E6C3F}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='115'>
+    <window class='worksheet' name='KPI_Total_Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C739B4BA-5C23-4298-AC86-62B7ED0BCCA3}' />
+    </window>
+    <window class='worksheet' name='KPI_Return_Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{16BDF552-52EF-4F97-BF86-302EFD656BF8}' />
+    </window>
+    <window class='worksheet' name='KPI_Avg_Spend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2AE97915-7F0B-4BB6-881E-8C54228372BF}' />
+    </window>
+    <window class='worksheet' name='KPI_Avg_Quantity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3EF061CF-FB8F-4184-8879-93F36ECD6685}' />
+    </window>
+    <window class='worksheet' name='Return Rate by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6159CB8A-570E-41FB-A02B-7A12768B5CB3}' />
+    </window>
+    <window class='worksheet' name='Spend vs Quantity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Country:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7DF1B17E-B909-4DB2-AD2C-8C363E33FBE5}' />
+    </window>
+    <window class='worksheet' name='Return Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[none:Calculation_521854669968113665:nk]' show-title='false' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{353B6FDE-755A-4491-925A-6A6ACE8CFEB5}' />
+    </window>
+    <window class='worksheet' name='Spend Category vs Return Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1ng3mvo1t7echy12d3b6d0hkdqv6].[usr:Calculation_521854669967945728:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{16A4FEB9-0BDF-47FA-A311-C5442F8CEE3A}' />
+    </window>
+    <window class='worksheet' name='Spend vs Return'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DAA081E9-C508-4B85-8ECB-019CCF4EFE92}' />
+    </window>
+    <window class='worksheet' name='Feature Importance'>
+      <cards>
+        <edge name='left'>
+          <strip size='188'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{753D22A3-3936-4B4F-8E0E-1F2935640B5E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Model Comparison'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DD4EC8D4-20A6-4E81-B446-6AA32F49762F}' />
+    </window>
+    <window class='dashboard' name='Customer Returns Overview'>
+      <viewpoints>
+        <viewpoint name='KPI_Avg_Quantity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Avg_Spend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Return_Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI_Total_Customers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Return Distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Return Rate by Country' />
+        <viewpoint name='Spend Category vs Return Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Spend vs Quantity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6F1F3158-9EE1-4D58-83B1-8B8E13C51891}' />
+    </window>
+    <window class='dashboard' name='Model Insights'>
+      <viewpoints>
+        <viewpoint name='Feature Importance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Model Comparison'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Spend vs Return'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{66084CAF-F626-475F-BEC7-90A8C7A235B4}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Model Comparison' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
