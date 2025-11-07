@@ -6,6 +6,7 @@ The objective is to help businesses minimize return rates and enhance customer s
 
 📊 Dataset
 - **Source:** UCI Machine Learning Repository – Online Retail II (2010–2011)
+  Link - https://archive.ics.uci.edu/dataset/502/online+retail+ii
 - **Size:** 500,000+ transactions
 - **Features:** Invoice, Quantity, Price, Customer ID, Country, InvoiceDate
 
