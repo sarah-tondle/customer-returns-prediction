@@ -25,7 +25,7 @@ The objective is to help businesses minimize return rates and enhance customer s
 | Random Forest | 0.78 | 0.90 |
 
 - Logistic Regression achieved the highest accuracy.  
-- XGBoost recorded the highest AUC.  
+- Random Forest recorded the highest AUC.  
 
 📈 Dashboard
 Developed an interactive Tableau dashboard with:
