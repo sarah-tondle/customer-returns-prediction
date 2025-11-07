@@ -20,9 +20,9 @@ The objective is to help businesses minimize return rates and enhance customer s
 🚀 Results
 | Model | Accuracy | AUC |
 |--------|-----------|-----|
-| Logistic Regression | **0.91** | 0.89 |
-| XGBoost | 0.90 | **0.93** |
-| Random Forest | 0.88 | 0.91 |
+| Logistic Regression | **0.81** | 0.88 |
+| XGBoost | 0.80 | **0.89** |
+| Random Forest | 0.78 | 0.90 |
 
 - Logistic Regression achieved the highest accuracy.  
 - XGBoost recorded the highest AUC.  
